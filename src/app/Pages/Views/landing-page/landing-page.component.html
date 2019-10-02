@@ -68,4 +68,23 @@
     </mat-grid-list>
     <mat-divider class="divider"></mat-divider>
    </div>
+   <div class="learn-more">
+     <mat-grid-list class="list" [cols]="breakpoint2" [rowHeight]="breakpointRowHeight2" (window:resize)="resetBreakPoints($event)">
+       <mat-grid-tile class="tile2" *ngFor="let tile of tiles">
+         <mat-card class="card">
+           <div class="mat-title">
+             {{tile.Title2}}
+           </div>
+           <div class="mat-body">
+             {{tile.Body2}}
+           </div>
+           <div class="button_card">
+             <button mat-raised-button>
+               {{tile.buttonTxt2}}
+             </button>
+           </div>
+         </mat-card>
+       </mat-grid-tile>
+     </mat-grid-list>
+   </div>
  </div>
