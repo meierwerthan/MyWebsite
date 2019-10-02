@@ -5,10 +5,19 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingPageComponent } from './Pages/Views/landing-page/landing-page.component';
 import { NavigationComponent } from './Navigation/navigation/navigation.component';
-import {MatButtonModule, MatGridListModule, MatIconModule, MatMenuModule, MatToolbarModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatDividerModule,
+  MatGridListModule,
+  MatIconModule,
+  MatMenuModule,
+  MatToolbarModule
+} from '@angular/material';
 import { ProjectsComponent } from './Pages/Views/projects/projects.component';
 import { AboutComponent } from './Pages/Views/about/about.component';
 import { InterestsComponent } from './Pages/Views/interests/interests.component';
+import { FooterComponent } from './Footer/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +26,8 @@ import { InterestsComponent } from './Pages/Views/interests/interests.component'
     NavigationComponent,
     ProjectsComponent,
     AboutComponent,
-    InterestsComponent
+    InterestsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +37,9 @@ import { InterestsComponent } from './Pages/Views/interests/interests.component'
     MatMenuModule,
     MatButtonModule,
     MatToolbarModule,
-    MatGridListModule
+    MatGridListModule,
+    MatCardModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

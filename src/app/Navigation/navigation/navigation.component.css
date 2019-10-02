@@ -32,5 +32,9 @@
 
 .navigation-header {
   height: 50px;
-  background-color: #D9E0F7;
+  background-color: lightsteelblue;
+  position: fixed;
+  overflow: hidden;
+  z-index: 10;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

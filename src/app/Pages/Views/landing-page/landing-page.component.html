@@ -1,14 +1,71 @@
-<div>
-  <div class="title">
-    <img class="image1" src="../../../../assets/Images/IMG_7408.jpg" />
-    <p class="mat-headline">
-      Meier Werthan
-    </p>
-    <p class="mat-subheading-2">
-      “I have no special talents. I am only passionately curious.” -Albert Einstein
-    </p>
+ <div style="background-color: lightslategray">
+  <div class="image-wrapper">
+    <img class="image1" src="https://lh3.googleusercontent.com/2-N2CcBQLxL0tXq5yzIQeZBmvrtjmPiaCp_D0bAIMZicI7mYGuTHiipaueJShkQSIoEcGQf9E_ibJbFwYfwag8nIuq8iNVdE4e_WOIxi4nmOby19YZwbgDY7yfDaQNiJlnJCrFRocA=w2400" />
   </div>
-  <mat-grid-list>
-
-  </mat-grid-list>
-</div>
+  <p class="mat-headline">
+    Meier Werthan
+  </p>
+  <div class="mat-subheading-2">
+    <p>“I have no special talents. I am only passionately curious.”</p>
+    <p>-Albert Einstein</p>
+  </div>
+   <div class="alternating">
+    <mat-grid-list [cols]="breakpoint" [rowHeight]="breakpointRowHeight" (window:resize)="resetBreakPoints($event)">
+      <mat-grid-tile class="tile">
+        <mat-card class="card-left">
+          <mat-icon class="md-80">{{this.image[0]}}</mat-icon>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile class="info-tile-right">
+        <div class="mat-h2">
+          {{this.Title[0]}}:
+          <p class="mat-body">{{this.Body[0]}}</p>
+          <div class="button">
+            <button mat-raised-button>
+              {{this.buttonTxt[0]}}
+            </button>
+          </div>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <mat-divider class="divider"></mat-divider>
+    <mat-grid-list [cols]="breakpoint" [rowHeight]="breakpointRowHeight" (window:resize)="resetBreakPoints($event)">
+      <mat-grid-tile class="info-tile-left">
+        <div class="mat-h2">
+          {{this.Title[1]}}:
+          <p class="mat-body">{{this.Body[1]}}</p>
+          <div class="button">
+            <button mat-raised-button>
+              {{this.buttonTxt[1]}}
+            </button>
+          </div>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile class="tile">
+        <mat-card class="card-right">
+          <mat-icon class="md-80">{{this.image[1]}}</mat-icon>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <mat-divider class="divider"></mat-divider>
+    <mat-grid-list [cols]="breakpoint" [rowHeight]="breakpointRowHeight" (window:resize)="resetBreakPoints($event)">
+      <mat-grid-tile class="tile">
+        <mat-card class="card-left">
+          <mat-icon class="md-80">{{this.image[2]}}</mat-icon>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile class="info-tile-right">
+        <div class="mat-h2">
+          {{this.Title[2]}}:
+          <p class="mat-body">{{this.Body[2]}}</p>
+          <div class="button">
+            <button mat-raised-button>
+              {{this.buttonTxt[2]}}
+            </button>
+          </div>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <mat-divider class="divider"></mat-divider>
+   </div>
+ </div>
